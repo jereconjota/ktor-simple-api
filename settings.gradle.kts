@@ -1,0 +1,1 @@
+rootProject.name = "jereconjota.ktor-viewers-api"

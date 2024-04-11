@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  db:
+    container_name: "viewers-db"
+    image: "postgres:15.2"
+    restart: always
+    environment:
+      POSTGRES_USER: "root"
+      POSTGRES_PASSWORD: "secret"
+      POSTGRES_DB: "viewers"
+    ports:
+        - "5432:5432"
+    volumes:
+      - db:/var/lib/postgresql/data
+volumes:
+  db:
+    driver: local
